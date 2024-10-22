@@ -10,6 +10,7 @@ sp1_zkvm::entrypoint!(main);
 
 use alloy_sol_types::SolType;
 use fibonacci_lib::{fibonacci, PublicValuesStruct};
+use revm::Evm;
 
 pub fn main() {
     // Read an input to the program.
@@ -23,6 +24,8 @@ pub fn main() {
 
     // Encode the public values of the program.
     let bytes = PublicValuesStruct::abi_encode(&PublicValuesStruct { n, a, b });
+
+    let _ = Evm::builder().build();
 
     // Commit to the public values of the program. The final proof will have a commitment to all the
     // bytes that were committed to.
