@@ -1,3 +1,15 @@
+# Generate ELF with docker
+```
+cd program
+cargo prove build --docker
+```
+
+# Try Building
+```
+cd script
+cargo run --release -- --prove
+```
+
 # SP1 Project Template
 
 This is a template for creating an end-to-end [SP1](https://github.com/succinctlabs/sp1) project
