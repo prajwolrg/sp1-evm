@@ -7,4 +7,11 @@ edition = "2021"
 alloy-sol-types = { workspace = true }
 sp1-zkvm = "3.0.0-rc4"
 fibonacci-lib = { path = "../lib" }
-revm = { version = "16.0.0", default-features = false }
+revm = { version = "12.1.0", features = [
+    "std",
+    "secp256k1",
+    "blst",
+], default-features = false }
+
+[patch.crates-io]
+secp256k1 = { git = "https://github.com/sp1-patches/rust-secp256k1", branch = "patch-secp256k1-v0.29.1" }

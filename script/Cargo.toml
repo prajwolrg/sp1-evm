@@ -23,4 +23,5 @@ alloy-sol-types = { workspace = true }
 fibonacci-lib = { path = "../lib" }
 
 [build-dependencies]
-sp1-helper = "3.0.0-rc4"
+# sp1-helper = "3.0.0-rc4"
+sp1-build = "3.0.0-rc4"
